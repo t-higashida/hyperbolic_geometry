@@ -1,0 +1,207 @@
+\subsection{1次分数変換群}
+
+さて，いままで準備した言葉を，1次分数変換に当てはめてみよう．
+
+\定義{1.33}
+$PSL(2;\C)$を1次分数変換全体の集合とする．$\varPhi_1,\varPhi_2 \in PSL(2;\C)$に対して，
+その合成，すなわち$z$を$\varPhi_1(\varPhi_2(z))$に写す写像$\varPhi$は，補題1.9により
+1次分数変換である．これを$\varPhi_1	\cdot	\varPhi_2$と書く．
+\□
+
+\定理{1.34}
+$(PSL(2;\C),\cdot)$は群をなす．
+
+\証明
+公理の（ⅰ）（結合性）は写像の合成がもつ一般的な性質である．すなわち
+\begin{align*}
+	((\varPhi_1	\cdot	\varPhi_2)	\cdot	\varPhi_3)(z)	&=	(\varPhi_1	\cdot	\varPhi_2)(\varPhi_3(z))
+	=	\varPhi_1(\varPhi_2(\varPhi_3(z))),	\\
+	(\varPhi_1	\cdot	(\varPhi_2	\cdot	\varPhi_3))(z)	&=	(\varPhi_1	((\varPhi_2	\cdot	\varPhi_3(z))
+	=	\varPhi_1(\varPhi_2(\varPhi_3(z))).
+\end{align*}
+単位元は
+\[
+	z	=	id(z)	=	\frac{1z	+	0}{0	+	1}
+\]
+で表される1次分数変換，$id$である．これを\textbf{恒等写像}（identity map）という．
+$z$を$\displaystyle	\frac{az	+	b}{cz	+	d}$に写す1次分数変換$\varPhi$の逆元を見つけよう．
+式（\ref{eq1x9}）を念頭において行列$\displaystyle	\begin{pmatrix}
+																											a	&	b	\\
+																											c	&	d	\\
+																									\end{pmatrix}$
+を考えよう．定義1.11により，$ad-bc	\ne	0$であるから，
+この行列には逆行列$\displaystyle	\begin{pmatrix}
+																		a'	&	b'	\\
+																		c'	&	d'
+																	\end{pmatrix}$が存在する．すなわち
+\begin{equation}
+	\begin{pmatrix}
+		a'	&	b'	\\
+		c'	&	d'
+	\end{pmatrix}
+	\begin{pmatrix}
+		a	&	b	\\
+		c	&	d
+	\end{pmatrix}
+	=
+	\begin{pmatrix}
+		a	&	b	\\
+		c	&	d
+	\end{pmatrix}
+	\begin{pmatrix}
+		a'	&	b'	\\
+		c'	&	d'
+	\end{pmatrix}
+	=
+	\begin{pmatrix}
+		1	&	0	\\
+		0	&	1
+	\end{pmatrix}.
+\label{eq1x18}
+\end{equation}
+$z$を$\displaystyle	\frac{a'z	+	b'}{c'	z	+	d'}$に写す1次分数変換を$\varPhi$とする．
+すると（\ref{eq1x8}），（\ref{eq1x9}），（\ref{eq1x18}）より
+\[
+	\varPhi	\cdot	\varPhi'	=	\varPhi'	\cdot	\varPhi	=	\text{id}.
+\]
+よって$\varPhi'$は$\varPhi$の逆元である．定理1.34は証明された．
+\■
+
+\問{4}
+$z$を$\displaystyle	\frac{z+3}{2z+i}$に写す1次分数変換の逆元を求めよ．
+
+（保留）
+
+次の補題は定義から明らかである．
+
+\補題{1.35}
+$\varPhi	\in PSL(2;\C)$，$z	\in	\C	\cup	\{\infty	\}$に対して，$\varPhi	\cdot	z	=	\varPhi(z)$とおくと，
+$\cdot	:	PSL	(2;	\C)	\times	\C	\cup	\{	\infty	\}	\to	\C	\cup	\{\infty	\}$は
+群$PSL (2;	\C)$のリーマン球面$\C	\cup	\{\infty\}$への作用を定める．
+\□
+
+\系{1.36}
+1次分数変換は全単射である．
+\□
+
+系は補題1.35および次の穂代1.37からただちに示される．
+
+\補題{1.37}
+群$G$が集合$X$に作用しているとする．$g	\in	G$を任意の元とする．
+このとき，$x	\in	X$に$g	\cdot	x$を対応させる$X$から$X$への写像は全単射である．
+
+\証明
+$g$の逆元を$g^{-1}$とすると，$x$に$g^{-1}	\cdot	x$を対応させる写像が，
+$x	\in	X$ﾆ$g	\cdot	x$を対応させる写像の逆写像である．実際
+\[
+	g^{-1}	\cdot	(g	\cdot	x)	=	(	g^{-1}	\cdot	g)	\cdot	x	=	e	\cdot	x	=x
+\]
+である．よって，$x	\in	X$に$g	\cdot	x$を対応させる$X$から$X$への写像は全単射である．
+\■
+
+\S \ref{sec1x1}で述べた，$PSL(2;	\C)$と$2	\times	2$行列の作る群の関係を定式化しよう．
+
+\定義{1.38}$G	,	H$を群とする．写像$\varphi	:	G	\to	H$が
+\textbf{準同型写像}（homomorphism）であるとは，$\varphi(g_1	g_2)	=	\varphi(g_1)	\varphi(g_2)$が
+任意の$g_1,	g_2	\in	G$に対して成立することを指す．
+\□
+
+\例題{1.39}
+準同型写像$\varphi	:	G	\to	H$は，$G$の単位元を$H$の単位元に写すことを示せ．
+
+\証明
+
+$G$の単位元を$e$と書くと，$\varphi(e)	=	\varepsilon	(	e	\cdot	e)	=	\varphi(e)	\cdot	\varphi(e)$．
+よって$\varphi(e)^{-1}$を両辺に掛けて，$e	=	\varphi(e)$．（この$e$は$H$の単位元である．）
+\■
+
+\例題{1.40}
+写像$\varphi	:	G	\to	H$が準同型写像とすると，$\varphi(g^{-1})	=	\varphi(g)^{-1}$であることを示せ．
+
+\解
+$\varphi(g^{-1})	\varphi(g)	=	\varphi(g^{-1}g)=	\varphi(e)	,
+\varphi(g)\varphi(g^{-1})	=	\varphi(gg^{-1})	=	\varphi(e)	=e$．
+故，逆元の一意性（例題1.19）より，$\varphi(g^{-1})	=	\varphi(g)^{-1}$が得られる．
+\■
+
+\定義{1.41}
+$\varphi	:	G	\to	H$が\textbf{同型写像}（isomorphism）であるとは，
+準同型写像でかつ全単射であることを指す．
+\□
+
+\注意{1.42}
+$\varphi	:	G	\to	H$が同型写像であれば，$\varphi$の逆写像も同型写像であることが容易にわかる．
+
+さて，$SL(2;	\C)$から，$PSL(2:	\C)$への写像$\varphi	:	SL(2;	\C)	\to	PSL(2;	\C)$
+を次のように定義する．
+
+$\displaystyle
+	\begin{pmatrix}
+		a	&	b	\\
+		c	&	d	
+	\end{pmatrix}	\in	SL(2;	\C)$に対して，
+$\varphi	\begin{pmatrix}
+						a	&	b	\\
+						c	&	d	
+					\end{pmatrix}$
+は$z$を$\displaystyle	\frac{az	+	b}{cz	+	d}$に写す
+1次分数変換$\varPhi$である．
+
+\補題{1.43}
+写像$\varphi	:	SL(2;\C)	\to	PSL(2;	\C)$は準同型写像である．
+\□
+
+これは，\S	\ref{sec1x1x2}の式（\ref{eq1x8}），（\ref{eq1x9}）で注意したことに
+他ならない．
+
+さらに次のことがわかる．
+
+\補題{1.44}
+写像$\varphi	:	SL(2;\C)	\to	PSL(2;\C)$は全射である．
+また，$A,B	\in	SL(2;	\C)$，$\varphi(A)	=	\varphi(B)$とすると，
+$A=B$または$A=	-B$である．
+
+\証明
+$\displaystyle	\varPhi(z)	=	\frac{az	+	b}{cz+d}$なる1次分数変換を考える．
+$ad	-bc	\ne	0$であった．$s	=	\sqrt{ad-bc}$として，
+$a'	=	a/s,	b'=	b/s$，$c'=c/s,	d'=d/s$とおく．
+$\displaystyle	\varPhi(z)	=		\frac{a'z	+	b'}{c'	z	+	d'}$である．
+一方$\displaystyle	\begin{pmatrix}
+											a'	&	b'	\\
+											c'	&	d'
+										\end{pmatrix}	\in	SL(2;	\C)$．よって，
+$\varPhi	=	\varphi	\begin{pmatrix}
+											a'	&	b'	\\
+											c'	&	d'
+										\end{pmatrix}$．
+すなわち$\varphi	:	SL(2;\C)	\to	PSL(2;	\C)$は全射である．
+
+次に，$A,	B	\in	SL(2;	\C),	\varphi(A)	=	\varphi(B)$としよう．
+すると，
+\[
+	\varphi(A^{-1}B)	=	\varphi(A^{-})	\varphi(B)	=	\varphi(A)^{-1}	\varphi(B)	=	id
+\]
+である．さて$A^{-1}	B=	\begin{pmatrix}
+													a	&	b	\\
+													c	&	d
+												\end{pmatrix}$とする．すると，
+\begin{equation}
+	z	=	\frac{az	+	b}{cz+d}
+\label{eq1x19}
+\end{equation}
+が任意の$z$に対して成り立つ．分母を払って整理すると
+\[
+	cz^2	+	(d-a)	z	-b	=0.
+\]
+よって，$c	=	b	=	0,	a=d$．さらに，$ad	-	bc	=1$であるから，
+$a	=	d	=1$または
+$a	=	d	=	-1$．よって，$A^{-1}	B	=	\pm	I$．すなわち
+$A	=	B$または$A	=	-B$．
+\■
+
+補題1.44は，「$PSL(2;	\C)$は$SL(2;	\C)$で$A$と$-A$を同一視したものである」
+と表現できる．これを記号で表すと，$PSL(2;	\C)	=	SL(2;\C)	/	\{	\pm	1	\}$となる．
+ここで$PSL(2,\R)	/	\{\pm	\}$は，$SL(2,	\R)$を2つの元からなる群
+$\{	\pm	\}$で割った商群（あるいは剰余類群）である．すなわち，
+$A	\sim	-A$で定まる$SL(2,\R)$上の同値関係による同値類全体に
+群構造を与えたものである．

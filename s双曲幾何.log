@@ -1,0 +1,411 @@
+This is pTeX, Version p2.1.5.beta12, based on TeX, Version 3.14159 (SJIS) (Web2c 7.0) (format=platex 5.8.11)  12 NOV 2006 18:05
+**sëoã»äÙâΩ
+(sëoã»äÙâΩ.tex
+pLaTeX2e <1997/07/02>+2 (based on LaTeX2e <1997/06/01> patch level 0)
+(c:/usr/local/share/texmf/tex/platex/local/myjbook.cls
+Document Class: myjbook 1997/08/14 v1.3 Okumura's Classes
+LaTeX Info: Redefining \sffamily on input line 28.
+LaTeX Info: Redefining \ttfamily on input line 31.
+(c:/usr/local/share/texmf/tex/platex/local/myjbk10.clo
+File: myjbk10.clo 1997/08/14 v1.3 Okumura's Classes
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 9.60999pt on input line 29.
+)
+\c@part=\count81
+\c@chapter=\count82
+\c@section=\count83
+\c@subsection=\count84
+\c@subsubsection=\count85
+\c@paragraph=\count86
+\c@subparagraph=\count87
+\c@figure=\count88
+\c@table=\count89
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\@lnumwidth=\dimen118
+\bibindent=\dimen119
+)
+(c:/usr/local/share/texmf/tex/latex/graphics/graphicx.sty
+Package: graphicx 1997/06/09 v1.0d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(c:/usr/local/share/texmf/tex/latex/graphics/keyval.sty
+Package: keyval 1995/09/21 v1.09 key=value parser (DPC)
+)
+(c:/usr/local/share/texmf/tex/latex/graphics/graphics.sty
+Package: graphics 1997/06/07 v1.0d Standard LaTeX Graphics (DPC,SPQR)
+
+(c:/usr/local/share/texmf/tex/latex/graphics/trig.sty
+Package: trig 1994/10/16 v1.08 sin cos tan (DPC)
+)
+(c:/usr/local/share/texmf/tex/latex/config/graphics.cfg)
+Package graphics Info: Driver file: dviout.def on input line 84.
+
+(c:/usr/local/share/texmf/tex/latex/graphics/dviout.def
+File: dviout.def 1997/6/29 Driver file of `dviout' for LaTeXe
+))
+\Gin@req@height=\dimen120
+\Gin@req@width=\dimen121
+)
+(c:/usr/local/share/texmf/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 1997/03/24 v2.2c
+\@emptytoks=\toks15
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 133.
+)
+(c:/usr/local/share/texmf/tex/latex/amslatex/amsmath.sty
+Package: amsmath 1997/03/20 v1.2d AMS math features
+\@mathmargin=\skip43
+
+(c:/usr/local/share/texmf/tex/latex/amslatex/amstext.sty
+Package: amstext 1996/10/28 v1.2b
+
+(c:/usr/local/share/texmf/tex/latex/amslatex/amsgen.sty
+File: amsgen 1996/10/29 v1.2b
+\@emptytoks=\toks16
+\ex@=\dimen122
+))
+(c:/usr/local/share/texmf/tex/latex/amslatex/amsbsy.sty
+Package: amsbsy 1996/10/28 v1.2b
+\pmbraise@=\dimen123
+)
+(c:/usr/local/share/texmf/tex/latex/amslatex/amsopn.sty
+Package: amsopn 1996/10/28 v1.2b operator names
+)
+LaTeX Info: Redefining \frac on input line 188.
+\uproot@=\count90
+\leftroot@=\count91
+\classnum@=\count92
+\DOTSCASE@=\count93
+LaTeX Info: Redefining \dots on input line 335.
+LaTeX Info: Redefining \ldots on input line 418.
+LaTeX Info: Redefining \cdots on input line 422.
+\Mathstrutbox@=\box41
+\strutbox@=\box42
+\big@size=\dimen124
+LaTeX Font Info:    Redeclaring font encoding OML on input line 500.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 501.
+\skewcharcount@=\count94
+\familycount@=\count95
+\pointcount@=\count96
+\accentdimen@=\dimen125
+\accentmu@=\count97
+\minaw@=\dimen126
+\c@MaxMatrixCols=\count98
+\dotsspace@=\muskip10
+\c@parentequation=\count99
+\dspbrk@lvl=\count100
+\tag@help=\toks17
+\row@=\count101
+\column@=\count102
+\maxfields@=\count103
+\andhelp@=\toks18
+\eqnshift@=\dimen127
+\alignsep@=\dimen128
+\tagshift@=\dimen129
+\tagwidth@=\dimen130
+\totwidth@=\dimen131
+\lineht@=\dimen132
+\@envbody=\toks19
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+)
+(c:/usr/local/share/texmf/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 1996/11/03 v2.2b
+)
+(c:/usr/local/share/texmf/tex/latex/amsfonts/eucal.sty
+Package: eucal 1995/01/06 v2.2 Euler Script fonts
+LaTeX Font Info:    Overwriting math alphabet `\EuScript' in version `bold'
+(Font)                  U/eus/m/n --> U/eus/b/n on input line 47.
+)
+(c:/usr/local/share/texmf/tex/latex/base/latexsym.sty
+Package: latexsym 1996/11/20 v2.2d Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 85.
+)
+(c:/usr/local/share/texmf/tex/latex/misc/epic.sty
+Enhancements to Picture Environment. Version 1.2 - Released June 1, 1986
+\@@multicnt=\count104
+\d@lta=\count105
+\@delta=\dimen133
+\@@delta=\dimen134
+\@gridcnt=\count106
+\@joinkind=\count107
+\@dotgap=\dimen135
+\@ddotgap=\dimen136
+\@x@diff=\count108
+\@y@diff=\count109
+\x@diff=\dimen137
+\y@diff=\dimen138
+\@dotbox=\box43
+\num@segments=\count110
+\num@segmentsi=\count111
+\@datafile=\read1
+) (c:/usr/local/share/texmf/tex/latex/misc/eepic.sty
+Extension to Epic and LaTeX. Version 1.1b - Released Febrary 7, 1988
+\@gphlinewidth=\count112
+\@eepictcnt=\count113
+\@tempdimc=\dimen139
+\maxovaldiam=\dimen140
+\@filltype=\box44
+) (c:/usr/local/share/texmf/tex/platex/base/ascmac.sty
+(c:/usr/local/share/texmf/tex/platex/base/tascmac.sty
+\@savetbaselineshift=\dimen141
+\@saveybaselineshift=\dimen142
+\scb@x=\box45
+\scscb@x=\box46
+\@bw=\dimen143
+\@nbox=\box47
+\@nbody=\box48
+\@scw=\dimen144
+\@itemh=\dimen145
+\@iboxstr=\toks20
+\@iboxpos=\toks21
+\@bwsp=\box49
+\@@bwsp=\box50
+\@bcal=\count114
+\shaderule=\dimen146
+)) (sëoã»äÙâΩ.aux
+(cover.aux) (Ç‹Ç¶Ç™Ç´.aux) (sec1.aux) (sec1x1x2.aux) (sec1x1x3.aux) (sec1x2.aux
+) (sec1x2x2.aux) (sec1x2x3.aux) (sec1x2x4.aux) (sec1x2x5.aux) (sec1x2x6.aux)
+(sec1x3.aux) (sec1x4.aux) (sec1x5.aux) (sec1x5x2.aux) (sec1x5x3.aux)
+(sec1x5x4.aux) (sec1x6.aux) (sec1x7.aux))
+\openout1 = `sëoã»äÙâΩ.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+\openout2 = `cover.aux'.
+
+ (cover.tex
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 16.60605pt on input line 3.
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 11.53198pt on input line 3.
+LaTeX Font Info:    Try loading font information for U+msa on input line 3.
+
+(c:/usr/local/share/texmf/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 1995/01/05 v2.2e AMS font definitions
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 3.
+
+(c:/usr/local/share/texmf/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 1995/01/05 v2.2e AMS font definitions
+)
+LaTeX Font Info:    Try loading font information for U+lasy on input line 3.
+
+(c:/usr/local/share/texmf/tex/latex/base/ulasy.fd
+File: ulasy.fd 1996/11/20 v2.2dLaTeX symbol font definitions
+) [1
+
+
+
+]) [2
+
+
+]
+\openout2 = `Ç‹Ç¶Ç™Ç´.aux'.
+
+ (Ç‹Ç¶Ç™Ç´.tex
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 23.90964pt on input line 1.
+LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
+(Font)              scaled to size 23.90964pt on input line 1.
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 6.72699pt on input line 46.
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 7.68799pt on input line 46.
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 5.76599pt on input line 46.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 60.
+LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
+(Font)              scaled to size 9.60999pt on input line 60.
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 60.
+
+[1
+
+
+]) [2] (sëoã»äÙâΩ.toc)
+\tf@toc=\write3
+\openout3 = `sëoã»äÙâΩ.toc'.
+
+ [3
+
+
+] [4
+
+]
+\openout2 = `sec1.aux'.
+
+ (sec1.tex
+ëÊ1èÕ
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 19.9311pt on input line 1.
+LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
+(Font)              scaled to size 19.9311pt on input line 1.
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 13.83836pt on input line 12.
+LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
+(Font)              scaled to size 13.83836pt on input line 12.
+LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
+(Font)              scaled to size 11.53198pt on input line 15.
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 4.805pt on input line 18.
+File: fig1x1.bmp Graphic file (type bmp)
+<fig1x1.bmp 175bp x 119bp>
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 8.64899pt on input line 31.
+ [1
+
+
+]
+File: fig1x2.bmp Graphic file (type bmp)
+ <fig1x2.bmp 172bp x 149bp>
+File: fig1x3.bmp Graphic file (type bmp)
+
+<fig1x3.bmp 151bp x 120bp>
+File: fig1x4.bmp Graphic file (type bmp)
+ <fig1x4.bmp 140bp x 167bp> [2]
+File: fig1x5.bmp Graphic file (type bmp)
+
+<fig1x5.bmp 179bp x 160bp> [3]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 135.
+
+
+(c:/usr/local/share/texmf/tex/latex/base/omscmr.fd
+File: omscmr.fd 1997/06/16 v2.5e Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 135.
+ [4]
+File: fig1x6.bmp Graphic file (type bmp)
+
+<fig1x6.bmp 153bp x 134bp>) [5]
+\openout2 = `sec1x1x2.aux'.
+
+ (sec1x1x2.tex) [6
+
+
+]
+\openout2 = `sec1x1x3.aux'.
+
+ (sec1x1x3.tex [7
+
+
+]
+File: fig1x7.bmp Graphic file (type bmp)
+
+<fig1x7.bmp 228bp x 133bp> [8]
+File: fig1x8.bmp Graphic file (type bmp)
+ <fig1x8.bmp 176bp x 126bp> [9] [10]) [11]
+\openout2 = `sec1x2.aux'.
+
+
+(sec1x2.tex [12
+
+
+] [13]) [14]
+\openout2 = `sec1x2x2.aux'.
+
+ (sec1x2x2.tex
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <7> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 23.
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <5> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 23.
+ [15
+
+
+]
+
+LaTeX Warning: Reference `1.9' on page 16 undefined on input line 162.
+
+[16]
+File: fig1x9.bmp Graphic file (type bmp)
+ <fig1x9.bmp 149bp x 183bp>) [17]
+\openout2 = `sec1x2x3.aux'.
+
+ (sec1x2x3.tex [18
+
+
+]
+Missing character: There is no ∆ in font cmr10!
+ [19]) [20]
+\openout2 = `sec1x2x4.aux'.
+
+
+No file sec1x2x4.tex.
+\openout2 = `sec1x2x5.aux'.
+
+No file sec1x2x5.tex.
+\openout2 = `sec1x2x6.aux'.
+
+No file sec1x2x6.tex.
+\openout2 = `sec1x3.aux'.
+
+(sec1x3.tex [21
+
+
+
+
+
+
+
+
+]) [22]
+\openout2 = `sec1x4.aux'.
+
+
+No file sec1x4.tex.
+\openout2 = `sec1x5.aux'.
+
+No file sec1x5.tex.
+\openout2 = `sec1x5x2.aux'.
+
+No file sec1x5x2.tex.
+\openout2 = `sec1x5x3.aux'.
+
+No file sec1x5x3.tex.
+\openout2 = `sec1x5x4.aux'.
+
+No file sec1x5x4.tex.
+\openout2 = `sec1x6.aux'.
+
+No file sec1x6.tex.
+\openout2 = `sec1x7.aux'.
+
+No file sec1x7.tex.
+(sëoã»äÙâΩ.aux (cover.aux) (Ç‹Ç¶Ç™Ç´.aux) (sec1.aux) (sec1x1x2.aux)
+(sec1x1x3.aux) (sec1x2.aux) (sec1x2x2.aux) (sec1x2x3.aux) (sec1x2x4.aux)
+(sec1x2x5.aux) (sec1x2x6.aux) (sec1x3.aux) (sec1x4.aux) (sec1x5.aux)
+(sec1x5x2.aux) (sec1x5x3.aux) (sec1x5x4.aux) (sec1x6.aux) (sec1x7.aux))
+
+LaTeX Warning: There were undefined references.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 1853 strings out of 10649
+ 19456 string characters out of 69356
+ 84878 words of memory out of 250001
+ 4838 multiletter control sequences out of 10000+0
+ 25215 words of font info for 116 fonts, out of 100000 for 500
+ 14 hyphenation exceptions out of 1000
+ 30i,15n,22p,228b,430s stack positions out of 300i,100n,500p,3000b,4000s
+
+Output written on sëoã»äÙâΩ.dvi (28 pages, 97604 bytes).

@@ -1,0 +1,343 @@
+\subsection{リーマン面}
+\label{sec1x1x3}
+
+（\ref{eq1x7}）の分母が$0$のときどうするか，という前の項で述べた疑問に答えよう．
+
+$\infty$という記号を考える．これは，とりあえずは，ただの記号で，無限に大きい数
+という意味ではない．次に複素数全体$\C$と$\infty$（という1つの元）を合わせた集合，
+$\C \cup \{ \infty \}$を考えよう．この集合を\textbf{リーマン（Riemann）球面}と
+呼ぶ（なぜ球面と呼ぶのかは，少し後で説明する．）
+
+すると，1次分数変換（\ref{eq1x8}）は，リーマン球面$\C \cup \{ \infty	\}$からそれ自身への
+写像$\varPhi : \C \cup \{ \infty \} \rightarrow \C \cup \{ \infty \}$として，
+次のように定義される．
+\begin{equation}
+	\varPhi(z)	=	
+	\begin{cases}
+\:	\displaystyle	\frac{az	+	b}{cz	+d}		&	z	\ne	\infty,	cz	+	d	\ne	0	\\
+\\
+\:	\infty																&	z	\ne	\infty,	cz	+	d	=	0	\\
+\\
+\:	\displaystyle	\frac{a}{c}							&	z=\infty,	a,	c	\ne	0	\\
+\\
+\:	\infty																&	z=\infty,	a	\ne	0	,	c=0	\\
+\\
+\:	0																			&	z=\infty,	a	=	0	,	c	\ne	0
+	\end{cases}
+\label{eq1x10}
+\end{equation}
+ただし，分子$az	+	b$と分母$cz	+	d$が両方同時に$0$になると，（\ref{eq1x10}）も
+いろいろと都合が悪い．それはどういう場合だろうか．
+
+\補題{1.10}
+4つの複素数$a,b,c,d$を考える．ただし$a	=	c=0$ではないとする．
+このとき，っぎの条件は条件は同値である．
+\begin{list}{}{}
+	\item（ⅰ）$az	+	b=cz	+	d=0$であるような複素数$z$が存在する．
+	\item（ⅱ）$ad-bc=0$．
+\end{list}
+\証明
+$2 \times 2$行列$\displaystyle	\begin{pmatrix}
+																	a	&	b	\\
+																	c	&	d
+																\end{pmatrix}$を考えよう．もし（ⅰ）が成り立てば
+\[
+	\begin{pmatrix}
+		a	&	b	\\
+		c	&	d
+	\end{pmatrix}
+	\begin{pmatrix}
+		z	\\	1
+	\end{pmatrix}
+	=
+	\begin{pmatrix}
+		az	+	b	\\	cz+d
+	\end{pmatrix}
+	=
+	\begin{pmatrix}
+		0	\\
+		0
+	\end{pmatrix}
+\]
+である．この両辺に行列
+$\displaystyle	\begin{pmatrix}
+									d		&	-c	\\
+									-b	&	a
+								\end{pmatrix}$
+を掛けると
+\begin{align*}
+	\begin{pmatrix}
+		0	\\	0
+	\end{pmatrix}
+&=
+	\begin{pmatrix}
+		d		&	-b	\\
+		-c	&	a
+	\end{pmatrix}
+	\begin{pmatrix}
+		0	\\	0
+	\end{pmatrix}
+=
+	\begin{pmatrix}
+		d	&	-b	\\
+		-c	&	a
+	\end{pmatrix}
+	\begin{pmatrix}
+		a	&	b	\\
+		c	&	d
+	\end{pmatrix}
+	\begin{pmatrix}
+		z	\\	1
+	\end{pmatrix}	\\
+&=\begin{pmatrix}
+		ad-bc	&	0	\\
+		0	&	ad-bc
+	\end{pmatrix}
+	\begin{pmatrix}
+		z	\\	1
+	\end{pmatrix}.
+\end{align*}
+よって，$ad	-		bc=0$である．
+
+つぎに$ad-bc=0$と仮定する．$a=c=0$ではないと仮定した．そこで，
+たとえば$a	\ne	0$とする．このとき$z	=	-b	/a$とおくと
+\begin{align*}
+	\begin{cases}
+							\:	az	+	b	=0	\\
+\displaystyle	\:	cz	+	d	=d	-	\frac{cb}{a}	=	\frac{ad-bc}{a}	=	0
+	\end{cases}
+\end{align*}
+よって，（ⅰ）が成り立つ．$c	\ne	0$のときは，$z	=	-d	/	c$とおけばよい．
+\■
+定義1.8をやりなおそう
+
+\定義{1.11}
+リーマン球面$\C \cup \{	\infty	\}$からそれ自身への写像$\varPhi	:	\C	\cup	\{	\infty	\}
+	\rightarrow \C	\cup	\{\infty	\}$が，1次分数変換であるとは，$ad-bc	\ne	0$であるような
+複素数$a,b,c,d$が存在し，$\varPhi$が（\ref{eq1x10}）で表されることを指す．
+\□
+
+つぎに，どうして$\C \cup \{ \infty	\}$をリーマン\underline{球面}と呼んだのかを説明しよう．
+そのために立体投影という写像を定義する．
+
+ガウス平面を3次元空間の中の$xy$平面と見なす．半径1の球面$S^2$を考え，
+それを原点が中心になるようにおく（図\ref{fig1x7}）．
+\begin{figure}[hbtp]
+	\centering
+	\includegraphics[bb=0 0 800 200,clip,width=80.6mm,height=47.0mm]{fig1x7.bmp}
+	\caption{立体投影1}
+	\label{fig1x7}
+\end{figure}
+球面上の点$(0,0,1)$（すなわち北極）を$N$とする．球面$S^2$上の$N$以外の任意の点
+$P$に対して，$P$と$N$とを結ぶ直線$NP$は$xy$平面とただ1点で交わる．この点を
+$\varPi (P)$とする．こうして，$S^2$から$N$を除いた集合$S^2 \setminus \{ N \}$から，
+$xy$平面あるいはガウス平面$\C$への写像$\varPi: S^2 \setminus \{ N \} \rightarrow \C$が
+定義された．この写像を\textbf{立体投影}（stereographic projection）と呼ぶ．
+
+\補題{1.12}
+$\varPi : S^2 \setminus \{ N \} \rightarrow \C$は全単射である．つまり，
+逆写像$\varPi^{-1} : \C \rightarrow S^2 \setminus \{ N \}$あが存在する．
+（全単射など，集合論については,『幾何入門』を見よ．）
+
+\証明
+$Q$を$xy$平面の任意の点とする．$Q$と$N$を結ぶ直線$QN$は，
+球面$S^2$と$N$および他の1点で交わる．$N$以外の交点を$\varPi^{-1}(Q)$とおく．
+定義より，$\varPi^{-1}(\varPi	(P))	=	P$，$\varPi (\varPsi^{-1}(Q))=Q$が容易にわかるから，
+$\varPi^{-1}$は$\varPi$の逆写像である．
+\■
+
+$\varPi (N) = \infty$とおくことで，$\varPi$を$S^2$から$\C \cup \{ \infty	\}$への写像と見なすと
+ことができる．以後そう考える．すると補題1.12より，$\varPi$は$S^2$と$\C \cup \{ \infty \}$の
+間の全単射を与える．
+
+\注意{1.13}
+このような場合，「$\varPi$で$S^2$と$\C \cup \{ \infty \}$を同一視する」という．
+
+\例題{1.14}
+$\varPi : S^2 \setminus \{ N \} \rightarrow \C$およびその逆写像を，
+座標を使って計算せよ．
+
+\解
+3次元（ユークリッド）空間$\R^3$の点の座標を$(x_1,	x_2	,	x_3)$とする．
+$z=x_1	+	ix_2,	h	=	x_3$とおく．これによって$\R^3$の点$P$は複素数$z$と実数$h$の
+組で表される．これを$P(z,h)$と書こう．このとき，$P$が$S~2$の点であることは，
+$|z|^2	+	h^2	=	1$（ここで$|z|$は複素数の絶対値）と同値である．すなわち
+\begin{equation}
+	h	=	\pm	\sqrt{1	-|z|^2	}	\quad	\text{複合同順}
+\label{eq1x11}
+\end{equation}
+さて$P(z,h)$が$S^2$の点$p$で表すとし，$\varPi (P) =Q$とする．$Q$が複素数$\omega$で
+表されているとする．立体投影の定義により，$\omega$と$z$は同じ方向を向いているから，
+$\omega	=	rz$なる正の実数$r$が存在する．
+\begin{figure}[hbtp]
+	\centering
+	\includegraphics[bb=0 0 800 200,clip,width=62.4mm,height=44.8mm]{fig1x8.bmp}
+	\caption{立体投影}
+	\label{fig1x8}
+\end{figure}
+一方，図\ref{fig1x8}の3角形$NPX$は3角形$NQO$と相似である．したがって，
+\[
+	(1-h)	:	|z|	=	1	:	|\omega|.
+\]
+よって$\displaystyle	r=	\frac{1}{1-h}$．つまり，
+\begin{equation}
+	\omega	=	\varPi	(z,h)	=	\frac{z}{1-h}	=	\frac{z}{1	\pm	\sqrt{1-|z|^2}}.
+\label{eq1x12}
+\end{equation}
+これを逆に解いてみる．（\ref{eq1x12}）の分母を払って整理すると
+\[
+	\omega	-	z	=	\pm	\omega	\sqrt{1-|z|^2}.
+\]
+両辺を2乗して
+\begin{align*}
+	\omega^2	-	2	\omega	z	+	z^2	=	\omega^2(1-|z|^2)	
+	&\Rightarrow
+	|z|^2	\omega^2	-	2	\omega	z	+	|z|^2	=0
+\end{align*}
+整理すると
+\begin{equation}
+	\overline{z}	\omega^2	-	2\omega	+	z	=	0
+\label{eq1x13}
+\end{equation}
+（\ref{eq1x13}）からその複素共役の$\omega^2$倍を引いて，
+\[
+	\overline{z}	\omega^2	-	2\omega	+	z	-	\omega^2(z	\overline{\omega}^2	-	2	\overline{\omega}	+	\overline{z})	=		0
+\]
+$\overline{z}$を消去すると，
+\begin{align*}
+		-2\omega	+	z	-	|\omega|^4	z	+	2	|\omega|^2	\omega=0	\\
+	&\Rightarrow	z-	|\omega|^4	z		=	2\omega	-	2	|	\omega|^2	\omega	\\
+	&\Rightarrow	z(1-|\omega|^2)(1	+	|\omega|^2)	=	2	\omega	(1	-	|\omega|^2)
+\end{align*}
+次式が得られる．
+\begin{equation}
+	z	=	\frac{2	\omega}{|\omega|^2	+	1}.
+\label{eq1x14}
+\end{equation}
+（\ref{eq1x14}）を（\ref{eq1x11}）に代入すると，
+\begin{align*}
+	h	&=	\pm	\sqrt{
+						1	-	\left|
+									\frac{2\omega}{|\omega|^2	+	1}
+								\right|^2
+					}
+		=	\pm	\sqrt{
+				\frac{(|\omega|^2	+	1)^2	-	4	|\omega|^2}{
+							(|\omega|^2	+	1)^2}	
+					}	\\
+		&=	\pm	\sqrt{
+				\frac{|\omega|^4	+	2	|\omega|^2	+	1	-	4	|\omega|^2
+						}{(|\omega|^2	+	1)^2
+						}
+					}
+		=	\pm	\sqrt{
+				\frac{(|\omega|^2	-1)^2
+						}{(|\omega|^2	+	1)^2
+						}
+					}
+\end{align*}
+$\displaystyle	h	=	\pm	\frac{|\omega|^2	-1}{|\omega|^2	+1}$が得られる．
+$|\omega|	<	1$で$h	<	0$ゆえ，複合は正である．すなわち
+\begin{equation}
+	h	=	\frac{|\omega|^2	-	1}{|\omega|^2	+	1}
+\label{eq1x15}
+\end{equation}
+（\ref{eq1x14}）,（\ref{eq1x15}）が$\varPi^{-1}$を与える．
+\■
+
+立体投影の性質を1つだけ証明しておこう．球面$S^2$の\textbf{小円}とは，
+$S^2$と平面の交わりを指す．球面$S^2$の\textbf{大円}とは，球面と中心を通る平面の
+交わりを指す（大円は小円であるが，逆は正しくない）．
+
+\補題{1.15}
+$S^2$の部分集合$L$に対して，次の（ⅰ）と（ⅱ）は同値である．
+\begin{list}{}{}
+	\item	（ⅰ）$L$は小円である．
+	\item	（ⅱ）$L$の$\varPi$による像$\varPi(L)$は，円または直線である．
+\end{list}
+\証明
+まず（ⅱ）を仮定して（ⅰ）を示そう．$\varPi(L)$が円であると仮定する．
+必要なら全体を直線$ON$を軸にして回転することにより，$\varPi(L)$の中心は実軸
+上にあるとしてよい．$\varPi (L)$の中心を$\omega_0$，半径を$r_0$とすると，
+$\omega	\in	\varPi(L)$は$|\omega	-	\omega_0	|	=	r_0$，同時に
+$\overline{\omega}	\in	\varPi(L)$は$|\overline{\omega}	-	\omega_0	|	=	r_0$
+すなわち
+\begin{align*}
+	|\omega	-	\omega_0	||\overline{\omega}	-	\omega_0	|	=	r_0^2	\\
+&\Rightarrow
+	|\omega|^2	-	\omega_0	(\omega	+	\overline{\omega})	+	\omega_0^2	-	r_0^2	=	0
+\end{align*}
+と同値である（$\omega_0$，$r_0$は実数）．すると
+\begin{align}
+	(|\omega|^2	-	1)	-	\frac{r_0^2	-	\omega_0^2	-1}{r_0^2	-	\omega_0^2	+	1}(|\omega|^2	+1)	\notag	\\
+&=	\frac{(|\omega|^2	-1)(r_0^2	-	\omega_0^2	+1)	-	(r_0^2	-	\omega_0^2	-1)(|\omega|^2	+	1)}{
+			r_0^2	-	\omega_0^2	+1}	\notag	\\
+&=	\frac{|\omega|^2	-	(r_0^2	-	\omega_0^2	+1)	+	|\omega|^2	-	(r_0^2	-	\omega_0^2	-1)
+			}{r_0^2	-	\omega_0^2	+1}	\notag	\\
+&=	\frac{2}{r_0^2	-	\omega_0^2	+1}(|\omega|^2	+	w_0^2	-r_0^2)	\notag	\\
+&=	\frac{2\omega_0}{r_0^2	-	\omega_0^2	+1}(\omega	+	\overline{\omega})	\notag	\\
+&\Rightarrow
+		\frac{(|\omega|^2	-1)}{|\omega|^2	+1}
+		=
+		\frac{r_0^2	-	\omega_0^2	-1}{r_0^2	-	\omega_0^2	+1}
+		+
+		\frac{2	\omega_0}{r_0^2	+	\omega_0^2	+1}\frac{\omega	+	\overline{\omega}}{|\omega^2	+1}
+\label{eq1x16}
+\end{align}
+（\ref{eq1x14}），（\ref{eq1x15}），（\ref{eq1x16}）より
+\begin{align}
+	h	&\stackrel{(\ref{eq1x15})}{=}	\frac{|\omega|^2-1}{|\omega|^2+1}	\notag	\\
+		&\stackrel{(\ref{eq1x16})}{=}	\frac{r_0^2	-	\omega_0^2	-1}{r_0^2	-\omega_0^2	+1}
+			+	\frac{2	\omega_0}{r_0^2	-\omega_0^2	+1}
+				\frac{\omega	+	\overline{\omega}}{|\omega|^2+1}	\notag\\
+		&\stackrel{(\ref{eq1x14})}{=}	\frac{r_0^2	-	\omega_0^2	-1}{r_0^2	-	\omega_0^2	+1}
+			+	\frac{\omega_0}{r_0^2	-	\omega_0^2	+1}(z	+	\overline{z})	=	a	+	b(z	+	\overline{z})
+\label{eq1x17}
+\end{align}
+ここで
+\[
+	\begin{cases}
+		\displaystyle	\frac{r_0^2	-	\omega_0^2	-1}{r_0^2	-	\omega_0^2	+1}	=	a	\\
+		\\
+		\displaystyle	\frac{\omega_0}{r_0^2	-	\omega_0^2	+1}	=	b
+	\end{cases}
+\]
+とおいた．$a,b$は定数であるから，（\ref{eq1x17}）は$L$が平面$h = a + b (z+ \overline{z})$にあることを
+示している
+\footnote{
+$z+ \overline{z}=x_1+ix_2+	x_1	-	ix_2	=2x_1$であるから，平面$x_3=2x_1$}
+よって（小円の定義より）（ⅰ）が成り立つ．
+
+次に（ⅰ）を仮定する．$L$上の異なる3点$P_1,P_2,P_3$をとり，
+$\varPi (P_i)=Q_i$とする．これら$Q_i$は平面上の異なる3点であるから，
+この3点を通る円または直線$M$がただ1つ存在する．$\varPi^{-1}(M)=L'$とする．
+$\varPi(L') = M$ゆえ，すでに示した（ⅱ）$\Longrightarrow$ （ⅰ）より，
+$L'$は小円である．また，$\varPi(Pi)=Q_i$で$M$は$Q_i$を含むから，
+$L'$は3点$P_1, P_2 , P_3$を含む．
+
+$P_1, P_2, P_3$は球面$S^2$の上にあるから，一直線上にはない．
+よって，3点$P_1,P_2,P_3$を通る小円はただ1つである．すなわち，$L'=L$．
+したがって，$\varPi(L) = \varPi(L') = M$は円または直線である．
+\■
+
+\問{2}
+補題1.15を計算せずに初等幾何で証明できないか．（証明できそうなのだが，著者には思いつかなかった）．
+\■
+
+さて，1次分数変換$\varPhi: \C \cup \{ \infty \} \rightarrow \C \cup \{ \infty \}$を考える．
+この写像を$\varPi$を用いて$S^2$からそれ自身への写像$\tilde{\varPhi} : S^2 \rightarrow S^2$
+とみなすことができる．つまり
+\[
+	\tilde{\varPhi} (P) = \varPi^{-1}(\varPhi(\varPi(P)))
+\]
+とおく．次の補題は容易に証明できる．（北極と$\infty$のところだけ注意すればよい．）
+
+\補題{1.16}
+$\tilde{\varPhi}$は連続である．すなわち，任意の球面上の収束点列$P_i$に対して
+\[
+	\lim_{i\rightarrow\infty}	\tilde{\varPhi}(P_i) = \tilde ( \lim_{t\rightarrow\infty} P_i)
+\]
+が成り立つ．
+\footnote{
+証明保留
+}\□

@@ -1,0 +1,57 @@
+\subsection{1次分数変換}
+\label{sec1x1x2}
+
+（\ref{eq1x4}）を一般化した，次の形の変形を考えよう．
+\begin{equation}
+	\varPhi	(z)	=	\frac{az	+	b}{cz+d}
+\label{eq1x7}
+\end{equation}
+
+\定義{1.8}
+複素数$a,b,c,d$を用いて（\ref{eq1x7}）の形に表される変換を，
+\textbf{1次分数変換}（fractional linear fransformation）と呼ぶ．
+\□
+$cz+d=0$の場合については次項 \ref{sec1x1x3}で説明する．
+
+（\ref{eq1x7}）で表される変換2つの合成を考えよう．つまり，
+\[
+	\varPhi_1(z)	=	\frac{a_1z	+	b_1}{c_1z+d_1},	\quad
+	\varPhi_2(z)	=	\frac{a_2z	+	b_2}{c_2z+d_2}	
+\]
+としたとき，$z$に$\varPhi_1(\varPhi_2(z))$を対応させる変換は何であろうか．
+答えは直接計算すればわかる．つまり
+\begin{align}
+	\varPhi_1(\varPhi_2(z))
+&=	\frac{a_1	\varPhi_2(z)	+	b_1}{c_1	\varPhi_2(z)	+	d_1}
+	=	\frac{\displaystyle	a_1	\frac{a_2	z	+	b_2}{c_2	z	+	d_2}	+	b_1}{
+					\displaystyle	c_1	\frac{a_2	z	+	b_2}{c_2	z+	d_2}	+	d_1}	\notag	\\
+&=	\frac{a_1	(a_2	z	+b_2)	+	b_1	(c_2	z	+	d_2)}{
+			c_1	(a_2	z	+	b_2)	+	d_1	(	c_2	z	+	d_2)}	\notag	\\
+&=	\frac{(	a_1	a_2	+	b_1	c_2)	z	+	(a_1	b_2		+	b_1	d_2)}{
+					(c_2	a_2	+	d_1	c_2)z	+	(c_1	b_2	+	d_1	d_2)}.	\label{eq1x8}
+\end{align}
+この変換も1次分数変換である．すんわち，
+
+\補題{1.9}
+1次分数変換の合成は1次分数変換である．
+\□
+
+（\ref{eq1x8}）に出てきた係数を見て，次の行列を思い出さなかっただろうか．
+\begin{equation}
+	\begin{pmatrix}
+		a_1	&	b_1	\\
+		c_1	&	d_1
+	\end{pmatrix}
+	\begin{pmatrix}
+		a_1	&	b_1	\\
+		c_1	&	d_1
+	\end{pmatrix}
+=
+	\begin{pmatrix}
+		a_1	a_2	+	b_1	c_2	&	a_1	b_2	+	b_1	d_2	\\
+		c_1	a_2	+	b_1	d_2	&	c_1	b_2	+	d_1	d_2	\\
+	\end{pmatrix}
+\label{eq1x9}
+\end{equation}
+（\ref{eq1x8}）の最後の式に出てきた4つの数は，（\ref{eq1x9}）の行列の右辺の成分と
+同じなのである．このことの意味することは，\S \ref{sec1x1x3}で述べよう．

@@ -1,0 +1,61 @@
+\documentclass{myjbook}
+\newcommand{\■}{\begin{flushright} ■ \end{flushright}}
+\newcommand{\□}{\begin{flushright} □ \end{flushright}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\証明}{\textgt{証明　}}
+\newcommand{\soji}{\text{∽}}
+\newcommand{\定義}[1]{\vspace{3mm}\textgt{定義#1. }}
+\newcommand{\定理}[1]{\vspace{3mm}\textgt{定理#1. }}
+\newcommand{\問}[1]{\vspace{3mm}\textgt{問}\textgt{#1}\textgt{．}}
+\newcommand{\補題}[1]{\vspace{3mm}\textgt{補題#1. }}
+\newcommand{\系}[1]{\vspace{3mm}\textgt{系#1. }}
+\newcommand{\注意}[1]{\vspace{3mm}\textgt{注意}\textgt{#1}\textgt{．}}
+\newcommand{\例}[1]{\vspace{3mm}\textgt{例#1.}}
+\newcommand{\Aleph}{\boldsymbol{\aleph}}
+\newcommand{\解}{\vspace{3mm}\textgt{解　}}
+\newcommand{\例題}[1]{\vspace{3mm}\textgt{例題#1. }}
+\newcommand{\公理}[1]{\vspace{3mm}\textgt{公理#1．　}}
+\newcommand{\Int}{\text{Int}}
+\newcommand{\framepage}[2]{%
+	\fbox{%
+		\begin{minipage}[t]{#1\textwidth}#2\end{minipage}%
+	}% \fbox END
+} % \newcommand END
+
+\usepackage{graphicx}
+\usepackage{amsfonts,amsmath,amssymb}
+\usepackage[mathscr]{eucal}
+\usepackage{latexsym}
+\usepackage{epic,eepic}
+\usepackage{ascmac}
+\setcounter{tocdepth}{3}
+
+
+\begin{document}
+	\include{cover}
+	\frontmatter
+	\include{まえがき}
+	\tableofcontents
+	\mainmatter
+	\include{sec1}
+	\include{sec1x1x2}
+	\include{sec1x1x3}
+	\include{sec1x2}
+	\include{sec1x2x2}
+	\include{sec1x2x3}
+	\include{sec1x2x4}
+	\include{sec1x2x5}
+	\include{sec1x2x6}
+	\include{sec1x3}
+	\include{sec1x4}
+	\include{sec1x5}
+	\include{sec1x5x2}
+	\include{sec1x5x3}
+	\include{sec1x5x4}
+	\include{sec1x6}
+	\include{sec1x7}
+\end{document}

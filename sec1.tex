@@ -1,0 +1,219 @@
+\chapter{1次分数変換}
+
+$\displaystyle	\varPhi (z) =\frac{az + b}{cz+ d}$なる変換を，
+1次分数変換と呼ぶ．1次分数変換は，双曲幾何で重要な役割を演ずる．この章ではまず，
+1次分数変換の幾何学的な性質を調べる．さらに，この本全体で中心的な役割を演ずる，
+群とその作用について，定義と簡単な性質を解説する．1次分数変換全体は群の例であり，
+また，それは，複素数全体に無限大という1つの元を付け加えた集合上に作用する．
+この作用の性質を調べるのが，この章の主題である．1次分数変換の群の作用の場合を
+具体的に調べることを通して，群やその作用という考え方に慣れることが，
+もう1つの目的である．
+
+\section{ガウス平面と1次分数変換}
+\label{sec1x1}
+
+\subsection{ガウス平面と1次変換}
+\textbf{複素数}とは，実数$x,y$を用いて，$z=x+iy$という風に表される数のを指す．
+ここで$i$は虚数単位で，$i^2=-1$を満たす数である．$x$を$z$の\textbf{実数部分}
+あるいは\textbf{実部}（real part）と呼び，$\text{Re }z$と表す．
+また，$y$を$z$の\textbf{虚数部分}または\textbf{虚部}（imaginary part）と呼び，
+$\text{Im }z$と表す．
+
+複素数の計算を見やすくするには，複素数を平面上の点と対応させるのがよい．
+すなわち，$z= x + iy$を平面上の座標で$(x,y)$を持つ点と見なすのである
+（図\ref{fig1x1}）．このように，複素数全体と見なされた平面のことを，
+\textbf{複素平面}または\textbf{ガウス（Gauss）平面}という．ガウス平面上で
+実数が表す点の全体を\textbf{実軸}，純虚数が表す点の全体を\textbf{虚軸}という．
+$z=x+iy$とし，座標$(x,y)$を用いてガウス平面と表すと，実軸は$x$軸，虚軸は$y$軸である．
+\begin{figure}[hbtp]
+	\centering
+	\includegraphics[bb=0 0 800 200,clip,width=62.0mm,height=42.0mm]{fig1x1.bmp}
+	\caption{ガウス平面}
+	\label{fig1x1}
+\end{figure}
+複素数の演算（掛け算や足し算）を，ガウス平面で見てみよう．
+まず，複素数$\alpha	=	a+	ib$を考え，$\alpha$を足すという写像$\varphi_\alpha$を考えよう．すなわち，
+\begin{equation}
+	\varphi_\alpha	=	z+	\alpha
+\label{eq1x1}
+\end{equation}
+である．これはどういう写像だろうか．座標を使って考えると，$\varphi_\alpha$は$z=x+iy$を
+$(x+a) + i(y+b)$に写す．つまり，$x$軸の方向に$a$，$y$軸方向に$b$の平行移動である
+（図\ref{fig1x2}）．
+\begin{figure}[hbtp]
+	\centering
+	\includegraphics[bb=0 0 800 200,clip,width=61mm,height=52.8mm]{fig1x2.bmp}
+	\caption{足し算}
+	\label{fig1x2}
+\end{figure}
+次に$\alpha	=	a	+	ib$を掛けるという写像$\varphi_\alpha$を考えよう．すなわち，
+\[
+	\psi_\alpha(z)	=	\alpha	z
+\]
+である．$\psi_\alpha$の様子を調べるには，$\alpha$を少し書き換えるのがよい．
+
+\補題{1.1}
+任意の複素数$z=x+iy$に対して，実数$r,\theta$が存在して，$z=re^{i\theta}$が成り立つ．
+
+\証明
+$r=|z| = \sqrt{z^2+ y^2}$とおく．$\displaystyle	\frac{z}{|z|}	=	u	+	iv$とする．
+$\displaystyle	\sqrt{u^2	+	v^2}	=	\left|	\frac{z}{|z|}	\right|=1$であるから，
+$u=\cos	\theta,	v=	\sin	\theta$なる実数$\theta$が存在する．\textbf{オイラー（Euler）の公式}
+\begin{equation}
+	e^{i\theta}	=	\cos	\theta	+	i	\sin	\theta
+\label{eq1x2}
+\end{equation}
+より，$z=r	e^{i	\theta}$がわかる．
+\■
+
+\問{1}
+$\cos 5 \theta + i \sin \theta $を$\cos \theta$と$\sin \theta$の多項式で表せ．
+
+\解
+
+(保留）
+
+$\alpha	=	re^{i	\theta}$を複素数$\alpha$の\textbf{極表示}という．ガウス平面で極表示を考えると，
+次のようになる．
+
+\補題{1.2}
+$z=re^{i \theta}$とすると，$r$は$z$と原点の距離，$\theta$は$z$と原点を結ぶ直線と実軸との
+間の角度である．
+\begin{figure}[hbtp]
+	\centering
+	\includegraphics[bb=0 0 800 200,clip,width=53.6mm,height=42.4mm]{fig1x3.bmp}
+	\caption{極表示}
+	\label{fig1x3}
+\end{figure}
+\証明
+$z = re^{i \theta}= r \cos \theta + ir + \sin \theta$であるから，$z$はガウス平面上の点
+$(r	\cos \theta, r \sin \theta)$に対応する．補題はこのことから明らかである．
+\■
+
+極表示を用いて，写像$\psi_\alpha (z) = \alpha z$を考察しよう．
+$\alpha = Re^{i \Theta}$とおく．すると
+\begin{equation}
+	\psi_\alpha	(	r	e^{i\theta}) = Re^{i\Theta} re^{i \theta} = r R e^{i \theta + \Theta}
+\label{eq1x3}
+\end{equation}
+である．すなわち，$\psi_\alpha (z)$と原点との距離は，$z$と原点との距離の$R$倍で，
+$\psi_\alpha ( z)$と原点を結ぶ直線と実軸との間の角度は，$z$と原点を結ぶ直線と実軸
+との間の角度に$\Theta$を足したものである（図\ref{fig1x4}）．
+\begin{figure}[hbtp]
+	\centering
+	\includegraphics[bb=0 0 800 200,clip,width=49.4mm,height=59.2mm]{fig1x4.bmp}
+	\caption{掛け算}
+	\label{fig1x4}
+\end{figure}
+
+これはどういう変換であろうか．言葉を複数しよう．
+
+\定義{1.3}
+$P$を平面上の点とし，$R$を正の実数とする．$P$を中心にした，
+比$R$の\textbf{相似変換}とは，次のような変換$\psi$を指す．$X$を平面上の
+$P$以外の点とする．$P$と$X$を結ぶ直線$PX$を考え，$Y$を$PX$上の点で，
+$P$から見て$X$と同じ側にあり，$P$と$Y$を結ぶ線分の長さが$P$と$X$を結ぶ線分
+の長さの$R$倍にある点とする（図\ref{fig1x5}）．
+$\psi (X) = Y$と定義する．$X=P$のときは，$\psi (P) = P$とする．
+\□
+\begin{figure}[hbtp]
+	\centering
+	\includegraphics[bb=0 0 800 200,clip,width=63.4mm,height=56.6mm]{fig1x5.bmp}
+	\caption{相似変換}
+	\label{fig1x5}
+\end{figure}
+
+\補題{1.4}
+相似変換に対して次の2つの性質が成り立つ．
+\begin{list}{}{}
+	\item	(ⅰ) 相似変換$\psi$は直線を直線に写す．
+	\item	(ⅱ) $L,L'$を直線とし，それらが相似変換$\psi$で，それぞれ，$\psi(L),\psi(L')$
+に写されるとする．このとき，$L$と$L'$のなす角は，$\psi(L)$と$\psi(L')$のなす角は等しい．
+\end{list}
+\□
+
+証明は読者に任せる（本シリーズ『幾何入門』\S 5.2.2 参照）．
+
+実数$R$に対して，$\psi_R$，すなわち$z$を$Rz$に写す変換は，原点を中心とする
+比$R$の相似変換である．このことを用いると，（\ref{eq1x3}）より次のことがわかる．
+
+\補題{1.5}
+$\alpha = Re^{i\theta}$に対して，写像$\psi_\alpha$は，原点を中心とし角度$\Theta$の反時計回りの
+回転と，原点を中心とする比$R$の相似変換の合成である．
+\□
+
+補題1.5より，掛け算で定義される変換は$\psi_\alpha$は，補題1.4の性質(ⅰ)，(ⅱ)を持つこと
+がわかる．
+
+今までに調べた2種類の変換，足し算と掛け算，を合わせて，次のような変換を考えよう．
+（\ref{eq1x4}）を\textbf{1次変換}と呼ぶ．
+\begin{equation}
+	\varPhi (z) = \alpha	z	+	\beta
+\label{eq1x4}
+\end{equation}
+ここで$\alpha,\beta$は定数（複素数）である．1次変換$\varPhi$は，平行移動，
+回転，相似変換の合成である．したがって，これも補題1.4の性質を持つ．
+すなわち，直線を直線に写し，直線間の角度を保つ．
+
+実は，逆に，直線を直線に写し，直線の間の角度を保つ任意の変換は，
+（\ref{eq1x4}）で表される1次変換$\varPhi$であるか，または次の式で与えられる変換
+$\varPhi'$であることが証明できる．
+\begin{equation}
+	\varPhi'(z) = \alpha \overline{z} + \beta.
+\label{eq1x5}
+\end{equation}
+ここで，$\overline{z}$は$z$の複素共役を指す．すなわち，$\overline{x + iy} = x -iy$である．
+この項の最後に，後で用いる，複素数で表した，ガウス平面上の円と直線の方程式を述べておこう．
+
+\補題{1.6}
+ガウス平面$\C$上の点$z_0$を中心とした半径$r$の円は
+\[
+	|z-z_0 | = r
+\]
+を満たす点$z \in \C$全体と一致する．
+\□
+証明は明らかであろう．
+
+\補題{1.7}
+ガウス平面上の原点を通らない直線$L$に対して，$z_0$なる複素数が存在して，
+$L$は
+\begin{equation}
+	z_0 z + \overline{z_0} \overline{z} = 1
+\label{eq1x6}
+\end{equation}
+を満たす複素数$z$全体と一致する．
+また，複素数$z_0$に対して（\ref{eq1x6}）を満たす複素数$z$全体は，ガウス平面内の直線である．
+
+\証明
+まず後半を証明しよう．$z_0 = a+ib$とする．$z = x+iy$とすると，
+（\ref{eq1x6}）は
+\[
+	ax - by=1/2
+\]
+で与えられる．これは直線の方程式である．
+
+次に，$L$を原点を通らない直線としよう．原点から$L$におろした垂線の足を$\omega$とする．
+すると，$z \in L$ならば$\displaystyle	\frac{z-w}{w}$は純虚数である（図\ref{fig1x6}）．
+（これは，$\displaystyle	\alpha	=	\frac{z-\omega}{\omega}$であるから，補題1.5によりわかる．）
+\footnote{分母の$\omega$は，$\omega$の偏角分時計回転することを意味する．}
+\begin{figure}[hbtp]
+	\centering
+	\includegraphics[bb=0 0 800 200,clip,width=54.2mm,height=47.4mm]{fig1x6.bmp}
+	\caption{直線$L$}
+	\label{fig1x6}
+\end{figure}
+
+よって，
+\[
+	\frac{z-\omega}{\omega}	+	\frac{\overline{z}	-	\overline{\omega}}{\overline{\omega}}	=0.
+\]
+これを書き換えて
+\[
+	z\overline{\omega} + \overline{z}\omega	=	2	|\omega|^2.
+\]
+よって，$\displaystyle	z_0=		\frac{\overline{\omega}}{2	|	\omega|^2}$とおくと，
+\[
+	z_0	z+	\overline{z_0}	\: \overline{z}	=1
+\]
+が$L$の方程式である．これで補題1.7は証明された．
+\■

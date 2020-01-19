@@ -1,0 +1,172 @@
+\subsection{群の作用}
+
+次に，群が集合に作用する，という言葉を定義しよう．
+
+\定義{1.28}
+$G$を群，$X$は集合とする．$G$の$X$への\textbf{作用}（action）とは，
+直積集合$G \times X$から$X$への写像$\cdot$であって，次の公理を満たすものである．
+以下，$g \in G, x \in X$に対して，$G \times X$の元$(g,x)$が$\cdot$で写される$X$の元を
+$g \cdot x$と書く．言い換えると
+\[
+	\cdot \: (g,x) = g \cdot x
+\]
+である．
+\begin{list}{}{}
+	\item	（ⅰ）$(g_1g_2) \cdot x = g_1 \cdot (g_2 \cdot x)$．
+	\item	（ⅱ）$e \cdot x = x$．ここで$e$は群$G$の単位元．
+\end{list}
+$g \cdot x$を$gx$，$g(x)$と書くことがある．
+\□
+
+\例{1.29}
+$X$を$n$次元複素ベクトル空間$\C^n$とすると，$GL(n;\C)$の$X$への作用が次のように
+して定義される．$X$の元を縦ベクトルで表す．$\boldsymbol{v}	\in X$，$A \in GL(n;\C)$とする．
+このとき
+\[
+	A	\cdot	\boldsymbol{v}	=	A\boldsymbol{v}
+\]
+と定義する．ここで右辺は$n \times n$行列$A$を，$n$次元縦ベクトル$\boldsymbol{v}$に掛けたものを
+表す．これは，再び$n$次元縦ベクトルであるから$X$の元である．
+
+定義1.28の公理（ⅰ）を確かめよう．$\boldsymbol{v}	\in	X,A,B \in GL(n;\C)$とすると
+\[
+	A	\cdot	(B	\cdot	\boldsymbol{v})	=	A(B \boldsymbol{v} = (AB) \boldsymbol{v}	=	(AB)	\cdot	\boldsymbol{v}.
+\]
+ここで2番目の等号は，行列の積の結合性（3つの行列$A,B,C$に対して$(AB)C=A(BC)$）による．
+公理（ⅱ）は明らかである．
+\□
+
+\問{3}
+$G$を群とする．$(g,h)$を$ghg^{-1}$に写す写像は，$G$の$G$への作用を定めることを示せ．
+
+\証明
+（保留）
+\■
+
+別の例として，\textbf{ユークリッド合同変換群}（Euclidean cngruent transformatino group）を考える．
+
+\定義{1.30}
+（2次元）ユークリッド合同変換群$E(2)$とは，$2 \times 2$直交行列$A$と2次元ベクトル
+$\boldsymbol{v}	\in	R^2$の組，$(A,\boldsymbol{v})$全体に，次の式で定義される積$\cdots$を
+考えたもを指す．
+\[
+	(A,\boldsymbol{v})	\cdot	(B,\boldsymbol{w})
+	=
+	(AB,	A\boldsymbol{w}	+	\boldsymbol{v}).
+\]
+\□
+
+$E(2)$が群であることを確かめよう．まず
+\begin{align*}
+	((A,	\boldsymbol{u})	\cdot	(B,\boldsymbol{v}))	\cdot
+	(C,	\boldsymbol{w})
+	&=	(AB, A\boldsymbol{v}+\boldsymbol{u})	\cdot	(C,	\boldsymbol{w})	\\
+	&=	((AB)C, AB\boldsymbol{w}+A\boldsymbol{v}	+	\boldsymbol{u}),	\\
+	(A,	\boldsymbol{u})	\cdot	((B,\boldsymbol{v}))	\cdot
+	(C,	\boldsymbol{w}))
+	&=	(A, \boldsymbol{u}) \cdot (BC,	B\boldsymbol{w}+ \boldsymbol{u})	\\
+	&=	(A(BC), A(B\boldsymbol{w}+\boldsymbol{v})	+	\boldsymbol{u}),	\\
+\end{align*}
+であるから，
+$((A,\boldsymbol{u})	\cdot	(B,\boldsymbol{v}))	\cdot	(C,\boldsymbol{w})
+	=	(A,	\boldsymbol{u})	\cdot	((B,\boldsymbol{v})	\cdot	(C,\boldsymbol{w}))$，
+すなわち，定義1.17の公理（ⅰ）が成り立つ．また
+\begin{align*}
+	(I,\boldsymbol{0})	\cdot	(A,\boldsymbol{v})	=	(IA,	I\boldsymbol{v}	+	\boldsymbol{0})	=	(A,\boldsymbol{v}),	\\
+	(A,\boldsymbol{v})	\cdot	(I,\boldsymbol{0})	=	(AI,	I\boldsymbol{v}	+	A\boldsymbol{0})	=	(A,\boldsymbol{v})
+\end{align*}
+ゆえ，$(I,\boldsymbol{0})$は単位元である．また
+\begin{align*}
+	(A^{-1},	-A^{-1}\boldsymbol{v})	\cdot	(A,	\boldsymbol{v})	
+	&=	(A^{-1}	A,	A^{-1}\boldsymbol{v}	-	A^{-1}	\boldsymbol{v})	=	(I,\boldsymbol{0}),	\\
+	(A,v)	\cdot	(A^{-1}	,-A^{-1}	\boldsymbol{v})
+	&=	(AA^{-1},	-AA^{-1}\boldsymbol{v}	+	\boldsymbol{v})	=	(I,\boldsymbol{0})	
+\end{align*}
+ゆえ$(A^{-1},	-A^{-1}	\boldsymbol{v})$は$(A,\boldsymbol{v})$の逆元である．
+
+\定義{1.31}
+平面（2次元ユークリッド空間）$\R^2$への$E(2)$の作用を定義する．2次元ベクトルを縦ベクトルで表す．
+$\boldsymbol{u}$を2次元（縦ベクトル），つまり$\R^2$の元とし，$(A,\boldsymbol{v})	\in	E(2)$とする．
+\[
+	(A,	\boldsymbol{v})	\cdot	\boldsymbol{u}	=	A	\boldsymbol{u}	+	\boldsymbol{v}.
+\]
+\□
+
+定義1.28の公理を確かめよう．（ⅰ）は
+\begin{align*}
+	((A,\boldsymbol{u})	\cdot	(B,\boldsymbol{v}))	\cdot	\boldsymbol{w}
+	&=	(AB,	A	\boldsymbol{v}+	\boldsymbol{u})	\cdot	\boldsymbol{w}
+	=	AB	\boldsymbol{w}	+	A	\boldsymbol{v}	+	\boldsymbol{u},	\\
+	(A,\boldsymbol{u})	\cdot	((B,\boldsymbol{v})	\cdot	\boldsymbol{w})	
+	&=	(A,\boldsymbol{u})	\cdot	(B\boldsymbol{w}	+	\boldsymbol{v})
+	=	AB\boldsymbol{w}	+	A\boldsymbol{v}	+	\boldsymbol{u}
+\end{align*}
+より従う．（ⅱ）は定義から明らかである．
+
+合同変換群という言葉は次の事実に由来する．
+
+\補題{1.32}
+$P,Q$を平面上の2点，$(A,\boldsymbol{v})	\in E(2)$とする．
+$P$と$Q$の間の（ユークリッド）距離は，$(A,\boldsymbol{v})	\cdot	P$と
+$(A,\boldsymbol{v})	\cdot	Q$の間の（ユークリッドの）距離に等しい．
+
+\証明
+$(A,	\boldsymbol{v})	\in	E(2)$とする．$\displaystyle	A	=	\begin{pmatrix}
+																														a	&	b	\\
+																														c	&	d
+																													\end{pmatrix}$とすると，
+$A$は直交行列であるから
+\[
+	I	=	\: ^tAA	=\begin{pmatrix}
+									a	&	c	\\
+									b	&	d
+							\end{pmatrix}
+							\begin{pmatrix}
+									a	&	b	\\
+									c	&	d
+							\end{pmatrix}
+							=
+							\begin{pmatrix}
+								a^2	+	c^2	&	ab	+	cd	\\
+								ab	+	cd	&	b^2	+	d^2
+							\end{pmatrix}
+\]
+$1=a^2	+	c^2$より，$a	=	\cos	\theta$，$c	=	\sin	\theta$なる実数$\theta$が存在する．
+すると$ab+cd=0$ゆえ$b	\cos	\theta	+	d	\sin	\theta=0$．一方$b^2	+	d^2=1$である．
+よって$b	=	\mp	\sin	\theta,d	=	\pm	\cos	\theta$（複合同順）．よって
+\begin{align*}
+	A&=	\begin{pmatrix}
+				\cos	\theta	&	-	\sin	\theta	\\
+				\sin	\theta	&		\cos	\theta
+			\end{pmatrix}
+			\quad	\text{または}	\\
+	A&=	\begin{pmatrix}
+				\cos	\theta	&		\sin	\theta	\\
+				\sin	\theta	&	-	\cos	\theta
+			\end{pmatrix}
+		=	\begin{pmatrix}
+				\cos	\theta	&		\sin	\theta	\\
+				\sin	\theta	&	-	\cos	\theta
+			\end{pmatrix}
+			\begin{pmatrix}
+				1	&	0	\\
+				0	&	-1
+			\end{pmatrix}.
+\end{align*}
+前者とすると，$(A,\boldsymbol{v})	\cdot	\boldsymbol{u}=A	\boldsymbol{u}+\boldsymbol{v}$
+は原点を中心とした角$\theta$の回転と，ベクトル$\boldsymbol{v}$で表される平行移動の
+合成である．よって補題の結論が成り立つ．
+
+後者とすると，$(A,\boldsymbol{v})	\cdot	\boldsymbol{u}	=	A\boldsymbol{u}	+	\boldsymbol{v}$は
+$x$軸に対する鏡映，原点を中心とした角$\theta$の回転，ベクトル$\boldsymbol{v}$で表される平行移動
+の3つの合成である（図\ref{1.9}）．よってやはり補題の結論が成り立つ．
+\■
+
+補題1.32には逆が成立する（本シリーズ『解析力学と微分形式』定理2.49）．
+
+\begin{figure}[hbtp]
+	\centering
+	\includegraphics[bb=0 0 800 200,clip,width=52.6mm,height=64.6mm]{fig1x9.bmp}
+	\caption{合同変換}
+	\label{fig1x9}
+\end{figure}

@@ -1,0 +1,295 @@
+\section{1次分数変換の性質}
+
+\subsection{円円対応}
+
+前の節で述べた考え方の応用として，次のことを示してみよう．
+
+\定理{1.45}
+$\varPhi$を1次分数変換，$L$をガウス平面の中の円または直線とする．すると，
+$L$の$\varPhi$による像$\varPhi(L)$も円または直線である．
+\□
+
+（群$G$が集合$X$に作用し，$g	\in	G,	A	\subset	X$であるとき
+\[
+	g(A)	=	\{	gx	\:	|	\:	x	\in	A	\}
+\]
+と記す．）
+
+定理の証明は計算を素直に実行してもできる．ここで群の考え方を使って，
+できるだけで見通しのよい証明を与えることを考えよう．
+
+\補題{1.46}
+$\displaystyle	\begin{pmatrix}
+									a	&	b	\\
+									c	&	d
+								\end{pmatrix}$を可逆$2	\times	2$行列とし，
+$a	\ne	0$とする．このとき
+\begin{equation}
+	\begin{pmatrix}
+		a	&	b	\\
+		c	&	d
+	\end{pmatrix}
+	=
+	\begin{pmatrix}
+		1				&	0	\\
+		\alpha	&	1
+	\end{pmatrix}
+	\begin{pmatrix}
+		\beta		&	0	\\
+		0				&	\gamma
+	\end{pmatrix}
+	\begin{pmatrix}
+		1		&	\delta	\\
+		0		&	1
+	\end{pmatrix}	
+\label{eq1x20}
+\end{equation}
+となるような，$\alpha	,	\beta	,	\gamma	,	\delta$が存在する．
+
+\証明
+（\ref{eq1x20}）の右辺の掛け算を実行すると
+\[
+	\begin{pmatrix}
+		a	&	b	\\
+		c	6	d
+	\end{pmatrix}
+	=
+	\begin{pmatrix}
+		1				&	0	\\
+		\alpha	&	1
+	\end{pmatrix}
+	\begin{pmatrix}
+		\beta	&	\beta	\delta	\\
+		0			&	\gamma
+	\end{pmatrix}
+	=
+	\begin{pmatrix}
+		\beta					&	\beta	\delta	\\
+		\alpha	\beta	&	\alpha	\beta	\delta	+	\gamma
+	\end{pmatrix}.
+\]
+よって，順に$\beta	=	a,	\alpha	=	c	/	\beta,	\delta	=	b	/\beta,	\gamma	=	d	^	\alpha	\beta	\delta$
+ととればよい．
+\■
+
+補題で$\begin{pmatrix}
+					a	&	b	\\
+					c	&	d
+				\end{pmatrix}	\in	SL(2;	\C)$ならば，
+$\begin{pmatrix}
+		1				&	0	\\
+		\alpha	&	1
+	\end{pmatrix},
+	\begin{pmatrix}
+		\beta	&	0	\\
+		0			&	\gamma
+	\end{pmatrix},
+	\begin{pmatrix}
+		1	&	\delta	\\
+		0	&	1
+	\end{pmatrix}	\in	SL(2;	\C)$であることに注意する．
+
+さて定理1.45の証明に入ろう．$\varPhi$を任意の1次分数変換とする．
+$\displaystyle	\varPhi	=	\varphi(A),	
+A=\begin{pmatrix}
+		a	&	b	\
+		c	&	d
+	\end{pmatrix}	\in	SL(2;	\C)$とする．$a	\ne	0$ならば，
+（\ref{eq1x20}）をみたす$\alpha,	\beta,	\gamma,	\delta$をとると，
+\begin{align*}
+		\varphi(A)	
+&=	\varphi
+			\left(
+				\begin{pmatrix}
+					1			&	0	\\
+				\alpha	&	1
+				\end{pmatrix}
+				\begin{pmatrix}
+					\beta		&	0	\\
+					0				&	\gamma
+				\end{pmatrix}
+				\begin{pmatrix}
+					1	&	\delta	\\
+					0	&	1
+				\end{pmatrix}
+			\right)	\\
+&=	\varphi
+			\left(
+				\begin{pmatrix}
+					0	&	i	\\
+					i	&	0
+				\end{pmatrix}
+				\begin{pmatrix}
+					1	&	\alpha	\\
+					0	&	1
+				\end{pmatrix}
+				\begin{pmatrix}
+					0	&	i	\\
+					i	&	0
+				\end{pmatrix}
+				\begin{pmatrix}
+					\beta		&	0	\\
+					0				&	\gamma
+				\end{pmatrix}
+				\begin{pmatrix}
+					1	&	\delta	\\
+					0	&	1
+				\end{pmatrix}
+			\right)	\\
+&=	\varphi
+			\left(
+				\begin{pmatrix}
+					0	&	i	\\
+					i	&	0
+				\end{pmatrix}
+			\right)
+		\varphi
+			\left(
+				\begin{pmatrix}
+					1	&	\alpha	\\
+					0	&	1
+				\end{pmatrix}
+			\right)
+		\varphi
+			\left(				
+				\begin{pmatrix}
+					0	&	i	\\
+					i	&	0
+				\end{pmatrix}
+			\right)
+		\varphi
+			\left(
+				\begin{pmatrix}
+					\beta		&	0	\\
+					0				&	\gamma
+				\end{pmatrix}
+			\right)
+		\varphi
+			\left(
+				\begin{pmatrix}
+					1	&	\delta	\\
+					0	&	1
+				\end{pmatrix}
+			\right)	\\
+\end{align*}
+である（$\beta	\gamma	=1$）．$a	=	0$ならば，
+\begin{align*}
+	\varphi(A)
+&	=	\varphi	\begin{pmatrix}
+							0	&	b	\\
+							c	&	d
+						\end{pmatrix}
+	=	\varphi	\begin{pmatrix}
+							0	&	i	\\
+							i	&	0
+						\end{pmatrix}
+	=	\varphi	\begin{pmatrix}
+							-ci	&	-di	\\
+							0		&	-bi
+						\end{pmatrix}	\\
+&	=	\varphi	\begin{pmatrix}
+							0	&	i	\\
+							i	&	0
+						\end{pmatrix}
+		\varphi	\begin{pmatrix}
+							-ci	&	0	\\
+							0		&	-bi
+						\end{pmatrix}
+		\varphi	\begin{pmatrix}
+								1	&	d/c	\\
+								0	&	1
+						\end{pmatrix}
+\end{align*}
+である（$bc=-1$）．
+
+よって定理は，
+$\displaystyle	
+	\varPhi	=	
+		\varphi	\begin{pmatrix}
+			0	&	i	\\
+			i	&	0
+		\end{pmatrix},
+	\varPhi	=	
+		\varphi	\begin{pmatrix}
+			\lambda	&	0	\\
+			0				&	\lambda^{-1}
+		\end{pmatrix},
+	\varPhi	=	
+		\varphi	\begin{pmatrix}
+			1	&	\alpha	\\
+			0	&	1
+		\end{pmatrix}$の場合のみ示せば十分である．
+
+場合1：$\varPhi	=	\varphi	\begin{pmatrix}
+														1	&	\alpha	\\
+														0	&	1
+													\end{pmatrix}$．
+この場合は$\varPhi(z)	=	z	+	\alpha$である．
+\S	\ref{sec1x1}で見たように，これは平行移動であるから，
+円を円，直線を直線に写す．
+
+場合2：$\varPhi	=	\begin{pmatrix}
+										\lambda	&	0	\\
+										0				&	\lambda^{-1}
+									\end{pmatrix}$．この場合は
+$\varPhi(z)	=	\lambda^2	z$である．これは，
+\S	\ref{sec1x1}で見たように，原点を中心とした回転と，原点を中心とした
+相似変換の合成である．よって，円を円，直線を直線に写す．
+
+場合3：$\varPhi	=	\varphi	\begin{pmatrix}
+														0	&	i	\\
+														i	&	0
+													\end{pmatrix}$．
+この場合は$\varPhi(z)	=	\frac{1}{z}$である．$L$を中心$z_0	\in	\C$，
+半径$r$の円とする．すると$L$の元$z$がみたすべき方程式は
+\[
+	|z	-z_0|	=r
+\]
+である（補題1.6）．よって$L$の像$\varPhi(L)$の元のみたすべき方程式は
+\begin{equation}
+	\left|	\frac{1}{z}	-	z_0
+	\right|	=	r
+\label{eq1x21}
+\end{equation}
+である（$\varPhi	(	\varPhi	(z))	=z$に注意）．（\ref{eq1x21}）を書き換えると
+\[
+	r^2	=	\left(	\frac{1}{z}	-	z_0
+				\right)
+				\left(	\frac{1}{z}	-	\overline{z_0}
+				\right)
+			=	
+\frac{1	-	zz_0	-	\overline{z}\overline{z_0}	+	|zz_0|^2}{z	\overline{z}},
+\]
+
+すなわち
+\begin{equation}
+	|z|^2	(r^2	-	|z_0|^2	)	=	1	-z	z_0	-	\overline{z}\overline{z_0}
+\label{eq1x22}
+\end{equation}
+である．
+まず$|z_0|	\ne	r$とする．すると，（\ref{eq1x22}）より
+\begin{align}
+	\left|	z	-	\frac{\overline{z_0}}{	|z_0|^2	-r^2	}
+	\right|^2
+&=
+	\left(	z	-	\frac{\overline{z_0}}{|z_0|^2	-	r^2}
+	\right)
+	\left(	\overline{z}	-	\frac{{z_0}}{|z_0|^2	-	r^2}
+	\right)	\notag	\\
+&=	z\overline{z}
+		-
+		\frac{z	z_0	+	\overline{z}\overline{z_0}}{|z_0|^2	-	r^2}
+		+
+		\frac{|z_0|^2}{(|z_0|^2	-	r^2)^2}
+		=
+		\frac{r^2}{(|z_0|^2	-	r^2)^2}.
+		\label{eq1x23}
+\end{align}
+（\ref{eq1x23}）は$\varphi(L)$が，
+$\displaystyle	\frac{|z_0|}{|z_0|^2	-	r^2}$を中心とした，
+半径$\displaystyle	\frac{r}{||z_0|^2	-r^2|}$の円であることを示している．
+
+
+
+
+
